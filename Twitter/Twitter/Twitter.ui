@@ -1,0 +1,3426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TwitterClass</class>
+ <widget class="QMainWindow" name="TwitterClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Twitter</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidgets">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Circular Std</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(20 ,31, 42);</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="LoginWindow">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(20 ,31, 42);</string>
+     </property>
+     <widget class="QLineEdit" name="UsernameLineEditLogin">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>560</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-bottom: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="placeholderText">
+       <string extracomment="Username">Username</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RegisterButtonLogin">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>740</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Register</string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PasswordLineEditLogin">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>620</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+background-color: rgb(20 ,31, 42);
+border-bottom: 2px solid rgb(27, 154, 231);
+color: rgb(255, 255, 255)
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LoginButton">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>690</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessageLogin">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>830</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 1px solid rgb(255, 54, 0);
+border-left: 1px solid rgb(255, 54, 0);
+border-right: 1px solid rgb(255, 54, 0);
+border-bottom: 1px solid rgb(255, 54, 0);</string>
+      </property>
+      <property name="text">
+       <string>Incorrect Username or Password</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessageUsernameLogin">
+      <property name="geometry">
+       <rect>
+        <x>1440</x>
+        <y>570</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Username not correct</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessagePassLogin">
+      <property name="geometry">
+       <rect>
+        <x>1440</x>
+        <y>630</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Password not correct</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1920</width>
+        <height>1080</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1920</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>1170</x>
+        <y>110</y>
+        <width>601</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <zorder>label_4</zorder>
+     <zorder>RegisterButtonLogin</zorder>
+     <zorder>ErrorMessageLogin</zorder>
+     <zorder>PasswordLineEditLogin</zorder>
+     <zorder>LoginButton</zorder>
+     <zorder>ErrorMessagePassLogin</zorder>
+     <zorder>ErrorMessageUsernameLogin</zorder>
+     <zorder>UsernameLineEditLogin</zorder>
+     <zorder>label_5</zorder>
+    </widget>
+    <widget class="QWidget" name="RegisterWindow">
+     <widget class="QLineEdit" name="UsernameLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>340</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-bottom: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PasswordLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>400</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-bottom: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PasswordCheckLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>460</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-bottom: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Repeat Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RegisterButtonRegisterWindow">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>530</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Register</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Back">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>580</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessageRegister">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>650</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 1px solid rgb(255, 54, 0);
+border-left: 1px solid rgb(255, 54, 0);
+border-right: 1px solid rgb(255, 54, 0);
+border-bottom: 1px solid rgb(255, 54, 0);</string>
+      </property>
+      <property name="text">
+       <string>Username Already Exist</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessageUsername">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>350</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Username not valid</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessagePassword">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>410</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:red;</string>
+      </property>
+      <property name="text">
+       <string>Password not valid</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorMessagePassDontMatch">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>480</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:red;</string>
+      </property>
+      <property name="text">
+       <string>Password doesn't match</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UsernameExists">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>350</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: red;</string>
+      </property>
+      <property name="text">
+       <string>Username Not Valid</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="FeedWindow">
+     <widget class="QLabel" name="FeeLabel">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>100</y>
+        <width>101</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Feed</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackButtonFeedWindow">
+      <property name="geometry">
+       <rect>
+        <x>1270</x>
+        <y>110</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentPostLabel">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>230</y>
+        <width>621</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Postare</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LikeButton">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>500</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Like</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="DislikeButton">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>500</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Dislike</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RetweetButton">
+      <property name="geometry">
+       <rect>
+        <x>1150</x>
+        <y>500</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Retweet!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CommentButton">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>500</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Comment</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="CommentList">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>580</y>
+        <width>661</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: white;
+border-width: 8px;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Emil</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Leo</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Poti</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Edi</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="PostsUsername">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>170</y>
+        <width>601</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*Username*</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LikeCountLabel">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>440</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* likes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DislikeCountLabel">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>440</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* dislikes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CommentCountLabel">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>440</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* comments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="WirteCommentFeed">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>780</y>
+        <width>711</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 25px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+padding-left: 20px;
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string extracomment="What are you searching for?">Write a comment</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CommentButtonFeed">
+      <property name="geometry">
+       <rect>
+        <x>1210</x>
+        <y>780</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-top-right-radius: 24px;
+border-bottom-right-radius: 24px;</string>
+      </property>
+      <property name="text">
+       <string>Comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ConfirmFeedWindow">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>860</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgbrgb(0,128,0);
+border-left: 2px solid rgb(0,128,0);
+border-right: 2px solid rgb(0,128,0);
+border-bottom: 2px solid rgb(0,128,0);</string>
+      </property>
+      <property name="text">
+       <string>Comment Posted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NextPostPP_2">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>310</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PrevPostPP_2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>310</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorFeedWindow">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>860</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgb(255,0,0);
+border-left: 2px solid rgb(255,0,0);
+border-right: 2px solid rgb(255,0,0);
+border-bottom: 2px solid rgb(255,0,0);</string>
+      </property>
+      <property name="text">
+       <string>The comment can't be posted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentRetweetLabel">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>350</y>
+        <width>531</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>text retweet</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="OriginalPostCreator">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>320</y>
+        <width>321</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Original post by:</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>290</y>
+        <width>551</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>310</y>
+        <width>20</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentPostLabelOriginal">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>230</y>
+        <width>621</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Postare</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <zorder>currentPostLabelOriginal</zorder>
+     <zorder>FeeLabel</zorder>
+     <zorder>BackButtonFeedWindow</zorder>
+     <zorder>currentPostLabel</zorder>
+     <zorder>LikeButton</zorder>
+     <zorder>DislikeButton</zorder>
+     <zorder>RetweetButton</zorder>
+     <zorder>CommentButton</zorder>
+     <zorder>CommentList</zorder>
+     <zorder>PostsUsername</zorder>
+     <zorder>LikeCountLabel</zorder>
+     <zorder>DislikeCountLabel</zorder>
+     <zorder>CommentCountLabel</zorder>
+     <zorder>WirteCommentFeed</zorder>
+     <zorder>CommentButtonFeed</zorder>
+     <zorder>ConfirmFeedWindow</zorder>
+     <zorder>NextPostPP_2</zorder>
+     <zorder>PrevPostPP_2</zorder>
+     <zorder>ErrorFeedWindow</zorder>
+     <zorder>currentRetweetLabel</zorder>
+     <zorder>OriginalPostCreator</zorder>
+     <zorder>line_4</zorder>
+     <zorder>line_5</zorder>
+    </widget>
+    <widget class="QWidget" name="MenuWindow">
+     <widget class="QPushButton" name="Post">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>450</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Tweet</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PersonalProfile">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>250</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Personal Profile</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Follow">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>570</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Follow</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Feed">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>570</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Feed</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="KeywordSearch">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>690</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Keyword Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="UserSearch">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>690</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;
+</string>
+      </property>
+      <property name="text">
+       <string>User Search</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MainMenuTitle">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>240</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>26</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="text">
+       <string>Welcome, </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Logout">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>300</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MainMenuTitle_2">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>300</y>
+        <width>631</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>26</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="text">
+       <string>*Username*</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="WhatsHappeningLabel">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>400</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="text">
+       <string>What's happening?</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>430</y>
+        <width>641</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CatchUp">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>520</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="text">
+       <string>Catch up</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="SearchLabelLabel">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>640</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>550</y>
+        <width>641</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>670</y>
+        <width>641</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(158, 158, 158);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SearchWindow">
+     <widget class="QLineEdit" name="SearchBarLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>300</y>
+        <width>661</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string extracomment="What are you searching for?">What are you searching for?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SearchButton">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>410</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackButtonSearchWindow">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>410</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="SearchListWidget">
+      <property name="geometry">
+       <rect>
+        <x>605</x>
+        <y>500</y>
+        <width>671</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: white;
+border-width: 8px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Emil</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Leo</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Poti</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Edi</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="KeywordWindow">
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>0</y>
+        <width>811</width>
+        <height>1031</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(20 ,31, 42);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="KeyEdit">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>70</y>
+         <width>711</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 25px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+padding-left: 20px;
+
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string extracomment="What are you searching for?">Search Twitter</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="KeySearch">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>70</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-top-right-radius: 24px;
+border-bottom-right-radius: 24px;</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>821</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20 ,31, 42);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="currentPostLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>20</y>
+          <width>601</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Postare</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+        <property name="indent">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>40</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="CommentButton_2">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>280</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+        </property>
+        <property name="text">
+         <string>Comment</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="LikeButton_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>280</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Like</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="RetweetCountLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>220</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>*number* retweets</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+        <property name="indent">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="LikeCountLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>220</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>*number* likes</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+        <property name="indent">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="DislikeCountLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>220</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>*number* dislikes</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+        <property name="indent">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="DislikeButton_2">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>280</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+        </property>
+        <property name="text">
+         <string>Dislike</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="RetweetButton_2">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>280</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Retweet!</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="CommentCountLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>220</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Circular Std</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>*number* comments</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+        <property name="indent">
+         <number>2</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>560</y>
+         <width>831</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20 ,31, 42);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QListWidget" name="listWidget">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>521</width>
+          <height>311</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="BackPostKeyword">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>510</y>
+         <width>91</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Circular Std</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+       </property>
+       <property name="text">
+        <string>Previous Post</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="NextPostKeyword">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>510</y>
+         <width>91</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Circular Std</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+       </property>
+       <property name="text">
+        <string>Next Post</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="BackButtonKeyword">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PostWindow">
+     <widget class="QLineEdit" name="TweetLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>380</y>
+        <width>661</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string extracomment="What's happening?">What's happening?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PostTweetButton">
+      <property name="geometry">
+       <rect>
+        <x>1170</x>
+        <y>610</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Tweet</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackButtonPost">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>610</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ConfirmPostWindow">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>680</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgbrgb(0,128,0);
+border-left: 2px solid rgb(0,128,0);
+border-right: 2px solid rgb(0,128,0);
+border-bottom: 2px solid rgb(0,128,0);</string>
+      </property>
+      <property name="text">
+       <string>Posted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorPostWindow">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>680</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgbrgb(255, 0, 0);
+border-left: 2px solid rgb(255, 0, 0);
+border-right: 2px solid rgb(255, 0, 0);
+border-bottom: 2px solid rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Post unsuccessful</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PersonalProfilePage">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="UsernamePersonalProfile">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>40</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*Username*</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="LogoutPersonalProfile">
+      <property name="geometry">
+       <rect>
+        <x>1280</x>
+        <y>40</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="FollowersCount">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>110</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*number* Followers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="FollowingCount">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>110</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*number* Following</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Posts">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>180</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Posts</string>
+      </property>
+     </widget>
+     <widget class="Line" name="linePP">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>170</y>
+        <width>771</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackButtonPersonalProfile">
+      <property name="geometry">
+       <rect>
+        <x>1310</x>
+        <y>90</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CommentCountPP">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>460</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* comments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LikeCountPP">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>460</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* likes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NextPostPP">
+      <property name="geometry">
+       <rect>
+        <x>1380</x>
+        <y>330</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>540</y>
+        <width>521</width>
+        <height>311</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentPostLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>260</y>
+        <width>581</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Postare</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DislikeCountPP">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>460</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* dislikes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PrevPostPP">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>330</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SearchedProfilePage">
+     <widget class="QLabel" name="FollowersCountSearchedProfile">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>150</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*number* Followers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="FollowingCountSearchedProfile">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>150</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*number* Following</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackButtonSearchedProfile">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>120</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(20 ,60, 88);
+border-left: 2px solid rgb(20 ,60, 88);
+border-right: 2px solid rgb(20 ,60, 88);
+border-bottom: 2px solid rgb(20 ,60, 88);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="FollowSearchedProfile">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>60</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Follow</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UsernameSearchedProfile">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>60</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>*Username*</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PrevPostSP">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>370</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="CommentCurrentPostSP">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>580</y>
+        <width>611</width>
+        <height>151</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="Line" name="lineSP">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>210</y>
+        <width>771</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LikeCountSP">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>500</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* likes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DislikeCountSP">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>500</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* dislikes</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CommentCountSP">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>500</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>*number* comments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentPostLabelSP">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>300</y>
+        <width>581</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 6px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+color: rgb(255, 255, 255);
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Postare</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <property name="indent">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PostsSP">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>220</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Posts</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NextPostSP">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>370</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,31, 42);
+border-radius: 20px;
+
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);</string>
+      </property>
+      <property name="text">
+       <string>&gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CommentButtonSP">
+      <property name="geometry">
+       <rect>
+        <x>1260</x>
+        <y>790</y>
+        <width>121</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 162, 243);
+border-top-right-radius: 24px;
+border-bottom-right-radius: 24px;</string>
+      </property>
+      <property name="text">
+       <string>Comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="WirteCommentSP">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>790</y>
+        <width>691</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 25px;
+border-top: 2px solid rgb(27, 154, 231);
+border-bottom: 2px solid rgb(27, 154, 231);
+border-left: 2px solid rgb(27, 154, 231);
+border-right: 2px solid rgb(27, 154, 231);
+text-color: rgb(27, 154, 231);
+background-color: rgb(20 ,31, 42);
+padding-left: 20px;
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string extracomment="What are you searching for?">Write a comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ConfirmSP">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>870</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgbrgb(0,128,0);
+border-left: 2px solid rgb(0,128,0);
+border-right: 2px solid rgb(0,128,0);
+border-bottom: 2px solid rgb(0,128,0);</string>
+      </property>
+      <property name="text">
+       <string>Comment Posted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ErrorSP">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>870</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Circular Std</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(20 ,60, 88);
+border-radius: 5px;
+border:none;
+border-top: 2px solid rgbrgb(255, 0, 0);
+border-left: 2px solid rgb(255, 0, 0);
+border-right: 2px solid rgb(255, 0, 0);
+border-bottom: 2px solid rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Comment can't be posted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>WirteCommentSP</zorder>
+     <zorder>FollowersCountSearchedProfile</zorder>
+     <zorder>FollowingCountSearchedProfile</zorder>
+     <zorder>BackButtonSearchedProfile</zorder>
+     <zorder>FollowSearchedProfile</zorder>
+     <zorder>UsernameSearchedProfile</zorder>
+     <zorder>PrevPostSP</zorder>
+     <zorder>CommentCurrentPostSP</zorder>
+     <zorder>lineSP</zorder>
+     <zorder>LikeCountSP</zorder>
+     <zorder>DislikeCountSP</zorder>
+     <zorder>CommentCountSP</zorder>
+     <zorder>currentPostLabelSP</zorder>
+     <zorder>PostsSP</zorder>
+     <zorder>NextPostSP</zorder>
+     <zorder>CommentButtonSP</zorder>
+     <zorder>ConfirmSP</zorder>
+     <zorder>ErrorSP</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Twitter.qrc"/>
+ </resources>
+ <connections/>
+</ui>
